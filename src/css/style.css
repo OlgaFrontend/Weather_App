@@ -2,6 +2,22 @@ body {
   background: lightcoral;
 }
 
-div div {
-  color: black;
+.app-header {
+  background: lightgreen;
+}
+
+.search-result {
+  background: lightgreen;
+}
+
+.today {
+  background-color: lightsteelblue;
+}
+
+.next-days {
+  background: pink;
+}
+
+.day {
+  background-color: lightskyblue;
 }

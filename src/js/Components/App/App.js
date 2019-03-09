@@ -1,5 +1,7 @@
 import Component from '../../framework/Component';
-import {Temperature} from "../Temperature";
+import {Header} from "../Header";
+import {WeatherForecast} from "../WeatherForecast";
+import {CurrentWeather} from '../CurrentWeather';
 
 export default class App extends Component {
   constructor(host) {
@@ -7,20 +9,20 @@ export default class App extends Component {
   }
 
     render () {
-      // const t1 = document.createElement('div');
-      // new Temperature(t1, {temperature: 7, unit: 'C'});
       
       return [ 
-        // 'Temperature', 
         {
-          tag: Temperature,
-          props: {
-            temperature: 7,
-            unit: 'C',
-          },
+          tag: Header,
+          props: {},
         },
-
-        
+        {
+          tag: CurrentWeather,
+          props: {},
+        },
+        {
+          tag: WeatherForecast,
+          props: {},
+        }
       ];
 
     }
