@@ -10,7 +10,7 @@ export default class CurrentWeather extends Component {
       {
         tag: 'div',
         classList: 'today',
-        content: 'It is hot weather today!',
+        content: 'CURRENT WEATHER',
       }
     ];
   }

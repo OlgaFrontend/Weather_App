@@ -1,7 +1,12 @@
 import Component from '../../framework/Component';
-import {Header} from "../Header";
+import {SearchBar} from "../SearchBar";
 import {WeatherForecast} from "../WeatherForecast";
 import {CurrentWeather} from '../CurrentWeather';
+import {History} from '../History';
+import {Favourites} from '../Favourites';
+import {ToggleDegree} from '../ToggleDegree';
+
+import WeatherDataService from "../../Services/WeatherDataService.js";
 
 export default class App extends Component {
   constructor(host) {
@@ -9,10 +14,21 @@ export default class App extends Component {
   }
 
     render () {
+      WeatherDataService.getCurrentWeather('London');
+      WeatherDataService.getForecastWeather('London');
       
-      return [ 
+      return [
         {
-          tag: Header,
+          tag: 'h1',
+          classList: 'title-h1',
+          content: 'Weather Forecast',
+        },
+        {
+          tag: SearchBar,
+          props: {},
+        },
+        {
+          tag: ToggleDegree,
           props: {},
         },
         {
@@ -22,7 +38,15 @@ export default class App extends Component {
         {
           tag: WeatherForecast,
           props: {},
-        }
+        },
+        {
+          tag: History,
+          props: {},
+        },
+        {
+          tag: Favourites,
+          props: {},
+        },
       ];
 
     }

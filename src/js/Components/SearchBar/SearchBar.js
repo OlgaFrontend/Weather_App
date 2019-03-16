@@ -1,8 +1,9 @@
-import Component from '../../../framework/Component';
+import Component from '../../framework/Component';
 
 export default class SearchBar extends Component {
   constructor(host, props) {
     super(host, props);
+    
   }
 
   render () {
@@ -20,8 +21,16 @@ export default class SearchBar extends Component {
             classList: ['search-input'],
             attributes: [
               {
+                name: 'id',
+                value: 'id-search-input',
+              },
+              {
                 name: 'type',
                 value: 'text',
+              },
+              {
+                name: 'placeholder',
+                value: 'search'
               }
             ],
           }

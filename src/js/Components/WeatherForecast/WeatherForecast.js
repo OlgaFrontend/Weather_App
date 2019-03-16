@@ -7,6 +7,7 @@ export default class WeatherForecast extends Component {
   }
 
   render () {
+
     return [
       {
         tag: 'ul',
